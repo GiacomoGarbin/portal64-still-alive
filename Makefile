@@ -20,8 +20,8 @@ $(SKELATOOL64):
 	@$(MAKE) -C skelatool64
 
 OPTIMIZER		:= -Os
-LCDEFS			:= -DDEBUG -g -Isrc/ -I$(N64_ROOT)/usr/include/n64/nustd -Werror -Wall
-N64LIB			:= -lultra_rom -lnustd
+LCDEFS			:= -DDEBUG -g -Isrc/ -I$(N64_ROOT)/opt/crashsdk/mips64-elf/include -Werror -Wall
+N64LIB			:= -lultra_rom
 
 ifeq ($(PORTAL64_WITH_DEBUGGER),1)
 LCDEFS += -DPORTAL64_WITH_DEBUGGER
@@ -79,7 +79,7 @@ LCDEFS +=	-DF3DEX_GBI_2 -DSCENE_SCALE=${SCENE_SCALE}
 
 LDIRT  =	$(BASE_TARGET_NAME).elf $(CP_LD_SCRIPT) $(BASE_TARGET_NAME).z64 $(BASE_TARGET_NAME)_no_debug.map $(ASMOBJECTS)
 
-LDFLAGS =	-L$(N64_ROOT)/usr/lib/n64 $(N64LIB)  -L$(N64_LIBGCCDIR) -lgcc
+LDFLAGS =	-L$(N64_ROOT)/usr/lib/n64 $(N64LIB) -L$(N64_ROOT)/opt/crashsdk/mips64-elf/lib -l:libc.a -L$(N64_LIBGCCDIR) -lgcc
 
 default:	english_audio
 
@@ -609,29 +609,29 @@ $(BASE_TARGET_NAME)_debug.z64: $(CODESEGMENT)_debug.o $(OBJECTS) $(DATA_OBJECTS)
 	sh tools/romfix64.sh $(BASE_TARGET_NAME).z64
 
 clean:
-	rm -rf build
-	rm -rf portal_pak_dir
-	rm -rf portal_pak_modified
-	rm -rf assets/locales
-	@$(MAKE) -C skelatool64 clean
+rm -rf build
+rm -rf portal_pak_dir
+rm -rf portal_pak_modified
+rm -rf assets/locales
+@$(MAKE) -C skelatool64 clean
 
 clean-src:
-	rm -rf build/src
-	rm -f $(CODESEGMENT)_debug.o
-	rm -f $(CODESEGMENT)_no_debug.o
-	rm -f $(BASE_TARGET_NAME)_debug.elf
-	rm -f $(BASE_TARGET_NAME).elf
-	rm -f $(BASE_TARGET_NAME).z64
-	rm -f $(BASE_TARGET_NAME)_debug.z64
+rm -rf build/src
+rm -f $(CODESEGMENT)_debug.o
+rm -f $(CODESEGMENT)_no_debug.o
+rm -f $(BASE_TARGET_NAME)_debug.elf
+rm -f $(BASE_TARGET_NAME).elf
+rm -f $(BASE_TARGET_NAME).z64
+rm -f $(BASE_TARGET_NAME)_debug.z64
 
 clean-assets:
-	rm -rf build/assets
-	rm -rf assets/locales/
-	rm -f $(CODESEGMENT)_debug.o
-	rm -f $(CODESEGMENT)_no_debug.o
-	rm -f $(BASE_TARGET_NAME)_debug.elf
-	rm -f $(BASE_TARGET_NAME).elf
-	rm -f $(BASE_TARGET_NAME).z64
-	rm -f $(BASE_TARGET_NAME)_debug.z64
+rm -rf build/assets
+rm -rf assets/locales/
+rm -f $(CODESEGMENT)_debug.o
+rm -f $(CODESEGMENT)_no_debug.o
+rm -f $(BASE_TARGET_NAME)_debug.elf
+rm -f $(BASE_TARGET_NAME).elf
+rm -f $(BASE_TARGET_NAME).z64
+rm -f $(BASE_TARGET_NAME)_debug.z64
 
 .SECONDARY:
