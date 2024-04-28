@@ -4,6 +4,8 @@
 #include "util/memory.h"
 #include "util/rom.h"
 
+#include "math/transform_libultra.h"
+
 void skArmatureInit(struct SKArmature* object, struct SKArmatureDefinition* definition) {
     unsigned transformSize = sizeof(struct Transform) * definition->numberOfBones;
     skArmatureInitWithPose(object, definition, malloc(transformSize));

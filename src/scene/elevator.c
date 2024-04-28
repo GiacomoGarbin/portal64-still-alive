@@ -27,6 +27,8 @@
 #define MOVING_SOUND_DELAY      1.5f  
 #define SHAKE_DURATION          0.5f    
 
+#include "math/transform_libultra.h"
+
 struct ColliderTypeData gElevatorColliderType = {
     CollisionShapeTypeMesh,
     &props_round_elevator_collision_collider,

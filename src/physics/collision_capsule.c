@@ -4,6 +4,8 @@
 #include "math/mathf.h"
 #include "collision_quad.h"
 
+#include "math/transform_libultra.h"
+
 float collisionCapsuleSolidMofI(struct ColliderTypeData* typeData, float mass) {
     struct CollisionCapsule* capsule = (struct CollisionCapsule*)typeData->data;
     return (2.0f / 5.0f) * mass * capsule->radius * capsule->radius;

@@ -5,6 +5,8 @@
 #include "collision.h"
 #include "../math/box3d.h"
 
+#include <ultra64.h>
+
 #define COLLISION_LAYERS_STATIC             (1 << 0)
 #define COLLISION_LAYERS_TRANSPARENT        (1 << 1)
 #define COLLISION_LAYERS_TANGIBLE           (1 << 2)

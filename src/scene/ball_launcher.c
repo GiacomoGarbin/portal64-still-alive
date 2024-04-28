@@ -14,6 +14,8 @@
 #include "../build/assets/materials/static.h"
 #include "../../build/assets/models/dynamic_animated_model_list.h"
 
+#include "math/transform_libultra.h"
+
 struct CollisionBox gBallLauncherBox = {
     {0.5f, 0.5f, 0.5f},
 };

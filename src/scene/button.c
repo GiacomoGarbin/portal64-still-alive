@@ -15,6 +15,8 @@
 #include "../scene/hud.h"
 #include "../scene/scene.h"
 
+#include "math/transform_libultra.h"
+
 struct Vector2 gButtonCylinderEdgeVectors[] = {
     {0.0f, 1.0f},
     {0.707f, 0.707f},

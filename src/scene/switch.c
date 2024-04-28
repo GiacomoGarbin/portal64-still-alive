@@ -14,6 +14,8 @@
 #include "../scene/hud.h"
 #include "../scene/scene.h"
 
+#include "math/transform_libultra.h"
+
 #define COLLIDER_HEIGHT   0.7f
 #define TICKTOCK_PAUSE_LENGTH  0.25f
 

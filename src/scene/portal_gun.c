@@ -13,6 +13,8 @@
 #include "../../build/assets/models/portal_gun/v_portalgun.h"
 #include "../../build/assets/materials/static.h"
 
+#include "math/transform_libultra.h"
+
 // the portal gun is rendered with a different field of view than the scene
 #define FIRST_PERSON_POV_FOV    42.45f
 

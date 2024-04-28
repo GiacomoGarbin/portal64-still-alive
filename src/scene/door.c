@@ -18,6 +18,8 @@
 #include "../build/assets/models/props/door_01.h"
 #include "../build/assets/models/props/door_02.h"
 
+#include "math/transform_libultra.h"
+
 #define OPEN_VELOCITY   8.0f
 
 #define OPEN_WIDTH  0.625

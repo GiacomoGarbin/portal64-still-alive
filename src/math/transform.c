@@ -20,13 +20,6 @@ void transformToMatrix(struct Transform* in, float mtx[4][4], float sceneScale) 
     mtx[3][2] = in->position.z * sceneScale;
 }
 
-
-void transformToMatrixL(struct Transform* in, Mtx* mtx, float sceneScale) {
-    float mtxf[4][4];
-    transformToMatrix(in, mtxf, sceneScale);
-    guMtxF2L(mtxf, mtx);
-}
-
 void transformInvert(struct Transform* in, struct Transform* out) {
     assert(in != out);
 

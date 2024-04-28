@@ -17,6 +17,8 @@
 
 #include "../math/mathf.h"
 
+#include "math/transform_libultra.h"
+
 #define DIGIT_WIDTH     512
 
 u8 gCurrentClockDigits[7];

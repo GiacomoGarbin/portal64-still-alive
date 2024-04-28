@@ -18,6 +18,8 @@
 #include "../effects/effect_definitions.h"
 #include "./scene.h"
 
+#include "math/transform_libultra.h"
+
 #define BALL_RADIUS 0.1f
 
 struct CollisionBox gBallCollisionBox = {

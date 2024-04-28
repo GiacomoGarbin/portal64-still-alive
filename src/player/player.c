@@ -23,6 +23,8 @@
 #include "../build/assets/materials/static.h"
 #include "../build/assets/models/portal_gun/w_portalgun.h"
 
+#include "math/transform_libultra.h"
+
 #define GRAB_RAYCAST_DISTANCE   2.5f
 #define GRAB_MIN_OFFSET_Y      -1.1f
 #define GRAB_MAX_OFFSET_Y       1.25f

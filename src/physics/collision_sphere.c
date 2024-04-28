@@ -4,6 +4,8 @@
 #include "math/mathf.h"
 #include "collision_quad.h"
 
+#include <stddef.h>
+
 int collisionSphereCollideQuad(void* data, struct Transform* boxTransform, struct CollisionQuad* quad, struct ContactManifold* output) {
     struct CollisionSphere* sphere = (struct CollisionSphere*)data;
 

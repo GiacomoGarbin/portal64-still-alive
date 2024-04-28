@@ -7,6 +7,8 @@
 #include "../util/time.h"
 #include "../util/dynamic_asset_loader.h"
 
+#include "math/transform_libultra.h"
+
 #define TIME_TO_FIZZLE      2.0f
 #define FIZZLE_TIME_STEP    (FIXED_DELTA_TIME / TIME_TO_FIZZLE)
 

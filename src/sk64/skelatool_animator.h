@@ -4,6 +4,8 @@
 #include "skelatool_clip.h"
 #include "../math/transform.h"
 
+#include <ultra64.h>
+
 enum SKAnimatorFlags {
     SKAnimatorFlagsLoop = (1 << 0),
     SKAnimatorFlagsDone = (1 << 1),

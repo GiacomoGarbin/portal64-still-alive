@@ -13,6 +13,8 @@
 
 #include "../build/assets/materials/static.h"
 
+#include "math/transform_libultra.h"
+
 #define IMAGE_WIDTH     16
 #define IMAGE_HEIGHT    64
 

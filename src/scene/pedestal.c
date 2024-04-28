@@ -12,6 +12,8 @@
 #include "../scene/hud.h"
 #include "../scene/scene.h"
 
+#include "math/transform_libultra.h"
+
 struct Vector2 gMaxPedistalRotation;
 #define MAX_PEDISTAL_ROTATION_DEGREES_PER_SEC   (M_PI / 3.0f)
 

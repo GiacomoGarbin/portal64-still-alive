@@ -10,6 +10,8 @@
 
 #include "../util/time.h"
 
+#include "math/transform_libultra.h"
+
 #define TRAIL_LENGTH    8.0f
 #define FADE_IN_LENGTH  4.0f
 #define SEGMENT_LENGTH  2.0f

@@ -15,6 +15,8 @@
 #include "../../build/assets/models/dynamic_animated_model_list.h"
 #include "../../build/assets/models/props/security_camera.h"
 
+#include "math/transform_libultra.h"
+
 struct CollisionBox gSecurityCameraCollisionBox = {
     {0.15, 0.3f, 0.35f}
 };

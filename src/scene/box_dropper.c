@@ -15,6 +15,8 @@
 #include "hud.h"
 #include "scene.h"
 
+#include "math/transform_libultra.h"
+
 #define DROPPER_RELOAD_TIME     2.0f
 #define DROPPER_DROP_TIME       0.5f
 
